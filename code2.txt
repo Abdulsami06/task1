@@ -1,0 +1,23 @@
+Validating User Input
+
+python
+Copy code
+def get_age():
+    age = input("Please enter your age: ")
+    if age.isnumeric() and int(age) >= 18:
+        return int(age)
+    else:
+        return None
+
+def main():
+    age = get_age()
+    if age is not None:
+        print(f"You are {age} years old and eligible.")
+    else:
+        print("Invalid input. You must be at least 18 years old.")
+
+if _name_ == "_main_":
+    main()
+Issues and Solutions:
+
+In the get_age function, you need to convert the input to an integer with int(age) to compare it to 18. Also, you should check if age is not None rather than relying on a truthy value (as 0 would be considered falsy). Therefore, the corrected code uses if age is not None.

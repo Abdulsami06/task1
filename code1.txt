@@ -1,0 +1,17 @@
+def reverse_string(s):
+    reversed_str = ""
+    for i in range(len(s) - 1, -1, -1):
+        reversed_str += s[i]
+    return reversed_str
+
+def main():
+    input_string = "Hello, world!"
+    reversed_string = reverse_string(input_string)
+    print(f"Reversed string: {reversed_string}")
+
+if _name_ == "_main_":
+    main()
+Issues and Solutions:
+
+Variable name conflict: The variable name "reversed" conflicts with the built-in function name "reversed." It's best to use a different variable name, so I changed it to "reversed_str."
+The code has no issues with the logic, but it's a good practice to use more descriptive variable names.
